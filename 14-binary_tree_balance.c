@@ -11,6 +11,9 @@ int binary_tree_balance(const binary_tree_t *tree)
 {
 	int df = 0, count_left = 0, count_right = 0;
 
+	if (tree == NULL)
+		return (0);
+
 	if (tree->left)
 	{
 		count_left += 1 + binary_tree_balance(tree->left);
